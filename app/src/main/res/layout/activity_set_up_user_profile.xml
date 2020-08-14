@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetUpUserProfile"
+    android:id="@+id/setUpUserProfileLayout"
+    android:background="@android:color/white">
+
+    <Button
+
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:text="SKIP"
+        android:fontFamily="@font/belgrano"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_toRightOf="@id/userIV"
+        android:background="@null"
+        android:textColor="@android:color/holo_blue_dark"
+        app:iconSize="24px" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/signOutAnim"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/donelogin" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="LOGOUT"
+        android:fontFamily="@font/belgrano"
+        android:id="@+id/backToLogin2"
+        android:background="@drawable/tv_rounded_boarder"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10sp"
+
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/userIV"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/profilefinal"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+
+
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ClickToAdd"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/userIV"
+        android:text="Click Here for Change Profile Photo"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="300dp"
+        android:hint="@string/enter_email_phonenumber"
+        app:hintTextColor="@android:color/black"
+        android:layout_height="100dp"
+        android:layout_below="@id/ClickToAdd"
+        android:ems="10"
+        app:hintAnimationEnabled="true"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"
+        android:nextFocusDown="@id/userFullName_text_input_layout"
+        app:counterTextAppearance="@style/counterText"
+        app:endIconMode="clear_text"
+        app:endIconContentDescription="Clear Text"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:labelFor="@id/etUsername"
+            android:nextFocusDown="@id/etFullName"
+            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+           />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userFullName_text_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:counterMaxLength="50"
+        app:counterEnabled="true"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Full Name"
+        android:layout_below="@id/username_text_input_layout"
+        app:counterTextAppearance="@style/counterText"
+        android:layout_centerHorizontal="true"
+        app:endIconMode="clear_text"
+        app:endIconContentDescription="Clear Text"
+        android:nextFocusDown="@id/userBIO_text_input_layout"
+        >
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:labelFor="@id/etFullName"
+            android:layout_centerVertical="true"
+            android:nextFocusDown="@id/userBio"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userBIO_text_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:counterMaxLength="300"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconContentDescription="Clear Text"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Bio"
+        android:layout_below="@id/userFullName_text_input_layout"
+        app:counterTextAppearance="@style/counterText"
+        android:layout_centerHorizontal="true"
+        android:nextFocusDown="@id/doneSetup"
+        >
+
+        <EditText
+            android:id="@+id/userBio"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:nextFocusDown="@id/doneSetup"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textLongMessage" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+
+        android:id="@+id/doneSetup"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userBIO_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/buttonColor"
+        android:drawableStart="@drawable/done_button_try2"
+        app:iconSize="34px"
+        android:textColor="@android:color/white"
+        android:text="@string/lets_go" />
+
+
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="610dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/progress_bar"
+        android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

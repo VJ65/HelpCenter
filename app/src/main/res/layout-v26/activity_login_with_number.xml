@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#f7f7f7">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/doneAnim"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/donelogin" />
+
+    <ImageView
+        android:id="@+id/backToLogin1"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
+        android:contentDescription="@string/backhomenumber"
+        android:src="@drawable/homeitem"
+        android:tag="Home"
+        android:textAlignment="center"
+        android:tooltipText="Back To Home" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/logo"
+        android:adjustViewBounds="true"
+
+        android:src="@drawable/icon_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/number" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/para"
+        android:textColor="@android:color/black"
+        android:text="@string/tlogin"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:fontFamily="@font/belgrano"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/para"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:counterMaxLength="11"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        android:hint="@string/numberafter92"
+        app:counterEnabled="true"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        app:counterTextAppearance="@style/counterText">
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:autofillHints="number"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getVerificationCodeBtn"
+        android:layout_below="@+id/username_text_input_layout"
+        android:text="@string/get_verification_code"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:backgroundTint="#035aa6"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line"
+        android:src="@drawable/line"
+        android:layout_below="@id/getVerificationCodeBtn"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/view" />
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:hint="@string/thatshint"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:autofillHints=""
+        tools:ignore="TextFields" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInVerificationCode"
+        android:layout_below="@+id/edit_password"
+        android:layout_marginTop="10dp"
+        android:text="@string/VCode"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:backgroundTint="#035aa6"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadTextAnimationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/signInVerificationCode"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadinganim" />
+
+
+
+</RelativeLayout>

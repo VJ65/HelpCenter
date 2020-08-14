@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/reeee">
+
+
+    <TextView
+        android:id="@+id/studentName1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/studentEmail1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/studentName1"
+        android:layout_alignStart="@+id/studentName1"
+        android:layout_alignEnd="@+id/studentName1"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/studentIssue1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentEmail1"
+        android:visibility="gone"
+        android:layout_alignEnd="@+id/studentEmail1"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="-16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittext_boarder"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:layout_below="@id/studentIssue1"
+        android:text="------------------------------------------"
+
+        />
+
+
+</RelativeLayout>

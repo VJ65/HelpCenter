@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/colorAccent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/doneAnim"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/donelogin" />
+
+    <ImageView
+        android:id="@+id/backToLogin1"
+        android:layout_width="50dp"
+
+        android:layout_height="55dp"
+        android:src="@drawable/ic_home_black_24dp"
+        android:textAlignment="center"
+
+        android:tooltipText="Back To Home"></ImageView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/logo"
+        android:src="@drawable/icon_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"></ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/para"
+        android:textColor="@android:color/black"
+        android:text="Remember It's a Temporary Login"
+         android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:fontFamily="cursive"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/para"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:counterMaxLength="11"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        android:hint="Enter Your Number after +92"
+        app:counterEnabled="true"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        app:counterTextAppearance="@style/counterText">
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            ></EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+       <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getVerificationCodeBtn"
+        android:layout_below="@+id/username_text_input_layout"
+        android:text="Get Verification Code "
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:backgroundTint="@color/buttonColor"></Button>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line"
+        android:src="@drawable/line"
+        android:layout_below="@id/getVerificationCodeBtn"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        ></ImageView>
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:hint="Enter Verification Code "
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:autofillHints="" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInVerificationCode"
+        android:layout_below="@+id/edit_password"
+        android:layout_marginTop="10dp"
+        android:text="Get Verification Code "
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:backgroundTint="@color/buttonColor"></Button>
+
+</RelativeLayout>

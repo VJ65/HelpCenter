@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInScreen"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:weightSum="2"
+        android:id="@+id/LN1"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/logoIMG"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/help_desk"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/welcome" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/doneAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/help_desk"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/welcome" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LN1"
+            android:weightSum="2"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/LN2"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_text_input_layout"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+
+                app:counterMaxLength="64"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/colorPrimary"
+                android:hint="@string/enter_email"
+                app:counterEnabled="true"
+                app:endIconMode="clear_text"
+                app:counterOverflowTextAppearance="@style/counterOverride"
+                app:counterTextAppearance="@style/counterText">
+
+                <EditText
+                    android:id="@+id/emailETV"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:inputType="textEmailAddress"
+                    android:gravity="center_horizontal"
+                    android:autofillHints=""
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="310dp"
+
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/colorPrimary"
+                android:hint="@string/enter_password"
+                app:passwordToggleEnabled="true"
+
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/passwordETV"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:gravity="center_horizontal"
+                    android:ems="10"
+
+                    android:inputType="textPassword"
+                    android:autofillHints=""
+                    tools:ignore="LabelForPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resetPasswordButton"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/click_here_for_reset_password"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LN2"
+        android:id="@+id/LN3"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+
+        <Button
+            android:id="@+id/loginUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="147dp"
+            android:layout_marginTop="10dp"
+            android:shadowColor="@android:color/white"
+            android:layout_marginEnd="158dp"
+            android:background="@drawable/swipe_button_shape"
+            android:text="@string/login"/>
+
+        <Button
+            android:id="@+id/logInPhn"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="92dp"
+            android:gravity="center"
+            android:background="@drawable/swipe_button_background"
+            android:backgroundTint="#035aa6"
+            android:text="@string/login_with_phonenumber"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:weightSum="2"
+    android:layout_below="@id/LN3"
+    android:orientation="horizontal"
+    android:gravity="center"
+    >
+
+    <Button
+        android:id="@+id/goToSignUpActivity"
+        android:layout_width="300dp"
+        android:shadowColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:foregroundGravity="center"
+        android:gravity="center"
+
+        android:text="@string/don_t_have_an_account_sign_up"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
+
+</RelativeLayout>

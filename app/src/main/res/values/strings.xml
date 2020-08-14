@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Help Desk</string>
+    <string name="sample_text_name">Sample Text Name</string>
+    <string name="sample_bio_textview">Sample Bio TextView</string>
+    <string name="sample_email_textview">Sample Email TextView</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="click_here_for_reset_password">Click Here For reset Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="login">Login</string>
+    <string name="login_with_phonenumber">Login with PhoneNumber</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t Have an Account? Sign up.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="anonymous_user">Anonymous User</string>
+    <string name="anonymous_user_bio">Anonymous user Bio</string>
+    <string name="anonymous_user_email">Anonymous User Email</string>
+    <string name="lets_go">Lets Go!!</string>
+    <string name="enter_email_phonenumber">Enter Email / PhoneNumber</string>
+    <string name="enter_bio">Enter Bio</string>
+
+    <string name="help_desk">Help Desk</string>
+    <string name="add_image">Add Image</string>
+
+    <string name="what_s_the_issue">What\'s the Issue ?</string>
+    <string name="logout">LOGOUT</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_name">Your Name</string>
+    <string name="report_your_issue">Report Your Issue</string>
+    <string name="send">SEND</string>
+    <string name="admin_side">ADMIN SIDE</string>
+    <string name="todo">TODO</string>
+
+    <string name="feedback">FeedBack</string>
+    <string name="back_to_main_screen">BACK TO MAIN SCREEN</string>
+    <string name="register">REGISTER</string>
+    <string name="students_name">Students Name</string>
+    <string name="student_email">Student Email</string>
+    <string name="student_issue">Student Issue</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="send78">SEND</string>
+    <string name="click_here_for_change_profile_photostatement">Click Here for Change Profile Photo</string>
+    <string name="logoutSetUp">LOGOUT</string>
+    <string name="skipSetUp">SKIP</string>
+    <string name="view">View</string>
+    <string name="thatshint">Enter Verification Code</string>
+    <string name="VCode">Get Verification Code</string>
+    <string name="numberafter92">Enter Your Number after +92</string>
+    <string name="tlogin">Remember It\'s a Temporary Login</string>
+    <string name="number">Number</string>
+    <string name="backhomenumber">BackHome</string>
+    <string name="get_verification_code">Get Verification Code</string>
+</resources>

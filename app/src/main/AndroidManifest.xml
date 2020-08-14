@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rp.finalprojectandroid">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UserInfoFromAdmin"></activity>
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".DeleteUser" />
+        <activity android:name=".NagivationView" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".LoginWithNumber" />
+        <activity android:name=".LogInScreen" />
+        <activity android:name=".ResetPasswodActivity" />
+        <activity android:name=".SetUpUserProfile" />
+        <activity android:name=".NoInternet" />
+        <activity android:name=".SignUpScreen" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

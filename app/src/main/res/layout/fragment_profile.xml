@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileFragment">
+
+    <Button
+        android:id="@+id/doneWithFragmentProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/LinearLayoutProfileFragment"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/power" />
+
+    <RelativeLayout
+        android:id="@+id/LinearLayoutProfileFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="376dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/edittext_boarder"
+      >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:backgroundTint="@null"
+            android:id="@+id/moveToReport"
+            android:background="@null"
+            android:drawableTop="@drawable/report_item"
+            android:text="Report Your Issue"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIVProfile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/anonymous" />
+
+        <TextView
+            android:id="@+id/userNameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/userIVProfile"
+            android:layout_marginTop="10dp"
+            android:text="@string/anonymous_user"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/userBioProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/userNameProfile"
+            android:layout_marginTop="10dp"
+            android:text="@string/anonymous_user_bio"
+            android:textColor="@android:color/black"
+
+
+            />
+
+        <TextView
+            android:id="@+id/userEmailProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userBioProfile"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/anonymous_user_email"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/deleteProfileFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+               android:layout_alignParentBottom="true"
+                android:backgroundTint="@android:color/white"
+                android:drawableStart="@drawable/delete"
+                android:text="Deactivate Profile"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/updateProfileFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@android:color/white"
+            android:drawableStart="@drawable/updateprofile"
+            android:drawablePadding="2dp"
+            android:text="@string/update_profile"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lastReport"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/LinearLayoutProfileFragment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="146dp"
+        android:background="@drawable/swipe_button_shape"
+        android:fontFamily="sans-serif"
+        android:text="Your last Report"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LinearLayoutProfileFragment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="516dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/repotingman" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastReportContent"
+        android:layout_below="@id/lastReport"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastReportTime"
+        android:layout_below="@id/lastReportContent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:fontFamily="monospace"
+        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/lastReportTime"
+            android:text="Show"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="75dp"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:background="@drawable/swipe_button_background"
+            android:id="@+id/getData"
+
+            />
+
+
+
+</RelativeLayout>

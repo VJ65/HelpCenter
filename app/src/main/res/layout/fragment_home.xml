@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:id="@+id/LL1"
+                    >
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/editTextAnimationHome"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/about" />
+
+
+
+                    <TextView
+                        android:id="@+id/developedByShaka"
+                        android:layout_width="351dp"
+                        android:layout_height="36dp"
+
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="22dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Developed BY WUH-Developers"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:text="wajeehulhassan82@gmail.com"
+
+                        android:fontFamily="monospace"
+                        android:layout_marginStart="30dp"
+                        />
+                </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="349dp"
+        android:layout_below="@id/LL1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="monospace"
+            android:text="Users who complained"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV"
+            android:layout_width="375dp"
+            android:layout_height="234dp"
+            android:paddingLeft="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="78dp"
+            android:background="@drawable/tv_rounded_boarder" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginStart="200dp"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_below="@id/LL1"
+        android:layout_marginTop="350dp"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/logoAbout"
+            android:layout_width="158dp"
+            android:layout_height="100dp"
+            android:src="@drawable/lolo" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SignUpScreen"
+   >
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logoIMG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/help_desk"
+        android:layout_marginTop="100dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/signup" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/backToLogin"
+        android:background="@null"
+        android:text="Back"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10sp"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        app:counterMaxLength="64"
+        app:hintAnimationEnabled="true"
+        android:layout_centerInParent="true"
+        app:hintTextColor="@color/colorPrimary"
+        android:hint="@string/enter_email"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        app:counterTextAppearance="@style/counterText">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:id="@+id/emailETV"
+        android:layout_centerHorizontal="true"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userpassword_text_input_layout"
+        android:layout_width="310dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        android:hint="@string/enter_password"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/username_text_input_layout"
+        android:layout_marginTop="20dp">
+    <EditText
+        android:id="@+id/passwordETV"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/emailETV"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/registerUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_below="@+id/userpassword_text_input_layout"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/holo_red_dark"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/button_background_login"
+        android:text="@string/register"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarSignUp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/progress_ba"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerUser"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible" />
+</RelativeLayout>

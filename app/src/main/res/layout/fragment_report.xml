@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ReportFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:id="@+id/RLL1"
+            android:weightSum="2"
+
+            >
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/report_your_issue"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="@android:color/black"
+                android:textStyle="normal"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed-light" />
+
+
+            <Button
+                android:id="@+id/backToLoginScreenButton"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:drawableTop="@drawable/power"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/logout" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RLL1"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:id="@+id/RLL2"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="379dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_boarder"
+            android:hint="@string/your_name"
+            android:padding="2dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="33"
+            app:counterOverflowTextAppearance="@style/counterOverride"
+            app:counterTextAppearance="@style/counterText"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/colorPrimary">
+
+            <EditText
+                android:id="@+id/reportIssueNameEV"
+                android:layout_width="307dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:autofillHints=""
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="378dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_boarder"
+            android:hint="@string/your_email"
+            android:padding="2dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="33"
+            app:counterOverflowTextAppearance="@style/counterOverride"
+            app:counterTextAppearance="@style/counterText"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/colorPrimary">
+
+            <EditText
+                android:id="@+id/reportIssueEmailEV"
+                android:layout_width="316dp"
+                android:layout_height="51dp"
+                android:layout_centerHorizontal="true"
+                android:autofillHints=""
+                android:gravity="center_horizontal"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="382dp"
+            android:layout_height="147dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_boarder"
+            android:hint="@string/what_s_the_issue"
+            android:padding="2dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="300"
+            app:counterOverflowTextAppearance="@style/counterOverride"
+            app:counterTextAppearance="@style/counterText"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/colorPrimary">
+
+            <EditText
+                android:id="@+id/reportIssueEV"
+                android:layout_width="360dp"
+                android:layout_height="107dp"
+                android:layout_centerHorizontal="true"
+                android:autofillHints=""
+                android:maxLines="3"
+                android:gravity="center_horizontal"
+                android:nextFocusDown="@id/reportIssueBtn"
+                android:inputType="textLongMessage"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RL3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@id/RLL2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/addImage"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/addicon"
+            android:text="@string/add_image" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadTextAnimation"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+
+            android:visibility="invisible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loadinfinity" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="94dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="21dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/dancingreport" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_below="@id/RL3"
+        android:weightSum="2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reportIssueBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:shadowColor="@android:color/black"
+            android:background="@drawable/swipe_button_background"
+            android:text="@string/send"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

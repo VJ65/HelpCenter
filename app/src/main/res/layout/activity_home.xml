@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:id="@+id/container"
+    >
+
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="40dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10sp"
+
+        android:layout_toEndOf="@id/LinearLayout"
+
+        android:background="@drawable/home" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:id="@+id/LinearLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userIVHome"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/usericon"
+            android:layout_marginTop="10dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_text_name"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/userNameHome"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_bio_textview"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/userBioHome"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/sample_email_textview"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/userEmailHome"
+/>
+        <Button
+            android:id="@+id/updateProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/white"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:text="@string/update_profile" />
+    </LinearLayout>
+
+
+</RelativeLayout>
